@@ -24,13 +24,11 @@ addNewListPopUpBtn.addEventListener("click", () => {
 closePopUp.addEventListener("click", () => {
   addNewListPopUp.style.display = "none";
   blur.style.filter = "none";
-  // homeText.style.display = "block";
 });
 
 let arrayOfObjectsOfCards = [];
 
 function addCard(e) {
-  // e.preventDefault();
   const cardName = inputList.value;
   const cardObjet = {
     id: Date.now(),
@@ -45,12 +43,10 @@ let selectedCardId;
 function createCard() {
   let card = document.createElement("div");
   card.className = "box";
-
-  // homeText.style.display = "block";
   for (let index = 0; index < arrayOfObjectsOfCards.length; index++) {
     const element = arrayOfObjectsOfCards[index];
     card.id = element.id;
-    card.innerHTML = `<i class="fas fa-trash-alt icon-style-22 display-none removeIcon"></i> <i class="icon-style-2 display-none fas fa-plus-circle plusbtn" data-card-id = "${card.id}"></i>`;
+    card.innerHTML = `<i class="fas icon fa-trash-alt icon-style-22 display-none removeIcon"></i> <i class="icon-style-2 icon display-none fas fa-plus-circle plusbtn" data-card-id = "${card.id}"></i>`;
 
     parentBox.appendChild(card);
     const HeadingOfCard = document.createElement("h1");
